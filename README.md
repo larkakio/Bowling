@@ -9,7 +9,7 @@ Cyber arcade bowling — swipe lanes plus wagmi/viem daily **`checkIn`** on Base
 
 ## Environment
 
-Copy [`web/.env.example`](web/.env.example) to `web/.env.local` and fill values. See [`web/README.md`](web/README.md) for details.
+Production example: `https://bowling-gamma.vercel.app` (`NEXT_PUBLIC_SITE_URL`).
 
 ## Scripts
 

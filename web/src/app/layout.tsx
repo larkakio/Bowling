@@ -15,10 +15,14 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://bowling-gamma.vercel.app';
+
 const baseAppId =
-  process.env.NEXT_PUBLIC_BASE_APP_ID ?? 'configure-base-app-id';
+  process.env.NEXT_PUBLIC_BASE_APP_ID ?? '6a01801aef4989446dc30d18';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Neo-Bowling Arena',
   description:
     'Swipe-to-bowl cyber arcade on Base. Connect your wallet & check in on-chain.',

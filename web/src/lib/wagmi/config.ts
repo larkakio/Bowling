@@ -17,7 +17,8 @@ const connectors = [
             url:
               typeof window !== 'undefined'
                 ? window.location.origin
-                : (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://example.com'),
+                : (process.env.NEXT_PUBLIC_SITE_URL ??
+                    'https://bowling-gamma.vercel.app'),
             icons: [],
           },
           showQrModal: true,
