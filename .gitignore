@@ -1,0 +1,8 @@
+.DS_Store
+web/.env*.local
+web/node_modules
+web/.next
+contracts/out
+contracts/cache
+contracts/broadcast/**/*.json
+!contracts/broadcast/.gitkeep

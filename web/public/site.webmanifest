@@ -1,0 +1,16 @@
+{
+  "name": "Neo-Bowling Arena",
+  "short_name": "Bowling",
+  "display": "standalone",
+  "start_url": "/",
+  "background_color": "#070712",
+  "theme_color": "#00fff0",
+  "icons": [
+    {
+      "src": "/app-icon.jpg",
+      "sizes": "1024x1024",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
