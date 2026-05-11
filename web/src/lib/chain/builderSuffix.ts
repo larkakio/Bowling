@@ -10,7 +10,7 @@ export function getBuilderDataSuffix(): Hex | undefined {
   ) {
     return overrideRaw as Hex;
   }
-  const code = process.env.NEXT_PUBLIC_BUILDER_CODE;
-  if (!code?.length) return undefined;
-  return Attribution.toDataSuffix({ codes: [code] }) as Hex;
+  const raw = process.env.NEXT_PUBLIC_BUILDER_CODE?.trim();
+  if (!raw?.length) return undefined;
+  return Attribution.toDataSuffix({ codes: [raw] }) as Hex;
 }

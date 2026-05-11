@@ -8,7 +8,7 @@
 | `NEXT_PUBLIC_CHAIN_ID` | optional | `8453` for Base mainnet (informational) |
 | `NEXT_PUBLIC_CHECK_IN_CONTRACT_ADDRESS` | after deploy | `0x…` Foundry `CheckIn` on Base |
 | `NEXT_PUBLIC_BASE_APP_ID` | Base.dev | Shown in `<meta name="base:app_id" />` |
-| `NEXT_PUBLIC_BUILDER_CODE` | Base.dev | `bc_…`; used with `ox` `Attribution.toDataSuffix` |
+| `NEXT_PUBLIC_BUILDER_CODE` | Base.dev | `bc_…`; `ox` `Attribution.toDataSuffix` → wagmi `createConfig({ dataSuffix })` ([docs](https://docs.base.org/apps/builder-codes/app-developers)) |
 | `NEXT_PUBLIC_BUILDER_CODE_SUFFIX` | optional | Raw `0x…` hex override for suffix |
 | `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID` | optional | Enables WalletConnect connector |
 

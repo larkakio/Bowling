@@ -2,6 +2,8 @@ import { http, createConfig, createStorage, cookieStorage } from 'wagmi';
 import { base, mainnet } from 'wagmi/chains';
 import { baseAccount, injected, walletConnect } from 'wagmi/connectors';
 
+import { getBuilderDataSuffix } from '@/lib/chain/builderSuffix';
+
 const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID;
 
 const connectors = [
@@ -27,6 +29,8 @@ const connectors = [
     : []),
 ];
 
+const builderDataSuffix = getBuilderDataSuffix();
+
 export const config = createConfig({
   chains: [base, mainnet],
   connectors,
@@ -36,6 +40,7 @@ export const config = createConfig({
     [base.id]: http(),
     [mainnet.id]: http(),
   },
+  ...(builderDataSuffix ? { dataSuffix: builderDataSuffix } : {}),
 });
 
 declare module 'wagmi' {

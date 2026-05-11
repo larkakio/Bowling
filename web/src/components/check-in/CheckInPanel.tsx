@@ -9,7 +9,6 @@ import {
 } from 'wagmi';
 import { base } from 'wagmi/chains';
 
-import { getBuilderDataSuffix } from '@/lib/chain/builderSuffix';
 import { checkInAbi } from '@/lib/chain/checkInAbi';
 
 const ADDRESS = process.env.NEXT_PUBLIC_CHECK_IN_CONTRACT_ADDRESS as
@@ -42,7 +41,6 @@ export function CheckInPanel() {
   async function handleCheckIn() {
     reset();
     if (!ADDRESS || !configured) return;
-    const suffix = getBuilderDataSuffix();
     const baseId = base.id as typeof base.id;
     if (chainId !== baseId) {
       await switchChainAsync({ chainId: baseId });
@@ -53,7 +51,6 @@ export function CheckInPanel() {
       functionName: 'checkIn',
       chainId: baseId,
       value: BigInt(0),
-      ...(suffix ? { dataSuffix: suffix } : {}),
     });
   }
 
